@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>Таблица с горизонтальной прокруткой</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<!-- https://htmlweb.ru/css/example/horizontal_scrolling_tables.php -->
+
+<style>
+    .table-box {
+        max-width: 1024px;
+    }
+    .table-box p {
+        font-size: larger;
+        font-weight: bold;
+    }
+    table {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+    }
+    thead {
+        border: 1px solid #ccc;
+    }
+    th, td {
+        border-left: 1px solid #ccc;
+        white-space: nowrap;
+        padding: 5px;
+    }
+    td:nth-last-child(-n+2) {
+        text-align: right;
+    }
+    @media screen and (max-width: 640px) {
+        .table-box {
+            overflow-x: scroll;
+        }
+    }
+</style>
+
+<body>
+<div class="table-box">
+    <p>Цена восстановления и заправки картриджей SAMSUNG</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Тип</th>
+                <th>Наименование</th>
+                <th>Восст.</th>
+                <th>Запр.</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>MLTD108S</td>
+            <td>Samsung №MLTD108S ML-1640/1641/1645/2240/2241 (MLTD108S)</td>
+            <td>1100</td>
+            <td>700</td>
+        </tr>
+        <tr>
+            <td>MLTD109S</td>
+            <td>Samsung №MLTD109S SCX-4300 прошитый (MLTD109S)</td>
+            <td>800</td>
+            <td>350</td>
+        </tr>
+        <tr>
+            <td>MLTD111S</td>
+            <td>Samsung №MLTD111S M2020/М2022/М2070 (MLTD111S)</td>
+            <td>700</td>
+            <td>300</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
+
+</html>

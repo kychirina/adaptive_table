@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>Больше не таблица</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<!-- https://htmlweb.ru/css/example/no_more_table.php -->
+
+<style>
+    .table-box {
+        max-width: 1024px;
+    }
+    .table-box p {
+        font-size: larger;
+        font-weight: bold;
+    }
+    table {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+    }
+    thead {
+        border: 1px solid #ccc;
+    }
+    th, td {
+        border-left: 1px solid #ccc;
+        padding: 5px;
+    }
+    td:nth-last-child(-n+2) {
+        text-align: right;
+    }
+    @media screen and (max-width: 640px) {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+        thead {
+            border: none;
+        }
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {
+            border-bottom: 1px solid #ccc;
+        }
+        tr:last-child {
+            border-bottom: 0;
+        }
+        tr:last-child td:last-child {
+            border-bottom: 0;
+        }
+        td {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            position: relative;
+            padding-left: 50%;
+            white-space: normal;
+            text-align:left;
+        }
+        td:before {
+            content: attr(data-title);
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align:left;
+            font-weight: bold;
+        }
+    }
+</style>
+
+<div class="table-box">
+    <table>
+        <p>Цена восстановления и заправки картриджей SAMSUNG</p>
+        <thead>
+            <tr>
+                <th>Тип</th>
+                <th>Наименование</th>
+                <th>Восст.</th>
+                <th>Запр.</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td data-title="Тип">MLTD108S</td>
+            <td data-title="Наименование">Samsung №MLTD108S ML-1640/1641/1645/2240/2241 (MLTD108S)</td>
+            <td data-title="Восст.">1100</td>
+            <td data-title="Запр.">700</td>
+        </tr>
+        <tr>
+            <td data-title="Тип">MLTD109S</td>
+            <td data-title="Наименование">Samsung №MLTD109S SCX-4300 прошитый (MLTD109S)</td>
+            <td data-title="Восст.">800</td>
+            <td data-title="Запр.">350</td>
+        </tr>
+        <tr>
+            <td data-title="Тип">MLTD111S</td>
+            <td data-title="Наименование">Samsung №MLTD111S M2020/М2022/М2070 (MLTD111S)</td>
+            <td data-title="Восст.">700</td>
+            <td data-title="Запр.">300</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</html>
